@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>[Title]</title>
+        <style>
+        .gallery {
+            columns: 8 250px;
+            column-gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            display: block;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            break-inside: avoid;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="gallery">
+            {% for image in images %}
+                <img src="static/{{ image }}">
+            {% endfor %}
+        </div>
+    </body>
+</html>
